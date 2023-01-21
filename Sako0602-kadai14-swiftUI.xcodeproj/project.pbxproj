@@ -14,6 +14,7 @@
 		695DF5572979775100E0BB67 /* Sako0602_kadai14_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF5562979775100E0BB67 /* Sako0602_kadai14_swiftUITests.swift */; };
 		695DF5612979775100E0BB67 /* Sako0602_kadai14_swiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF5602979775100E0BB67 /* Sako0602_kadai14_swiftUIUITests.swift */; };
 		695DF5632979775100E0BB67 /* Sako0602_kadai14_swiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF5622979775100E0BB67 /* Sako0602_kadai14_swiftUIUITestsLaunchTests.swift */; };
+		695DF57029797A9600E0BB67 /* FruitsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF56F29797A9600E0BB67 /* FruitsAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		695DF55C2979775100E0BB67 /* Sako0602-kadai14-swiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sako0602-kadai14-swiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		695DF5602979775100E0BB67 /* Sako0602_kadai14_swiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sako0602_kadai14_swiftUIUITests.swift; sourceTree = "<group>"; };
 		695DF5622979775100E0BB67 /* Sako0602_kadai14_swiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sako0602_kadai14_swiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		695DF56F29797A9600E0BB67 /* FruitsAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				695DF5452979774D00E0BB67 /* Sako0602_kadai14_swiftUIApp.swift */,
 				695DF5472979774D00E0BB67 /* ContentView.swift */,
+				695DF56F29797A9600E0BB67 /* FruitsAddView.swift */,
 				695DF5492979775000E0BB67 /* Assets.xcassets */,
 				695DF54B2979775000E0BB67 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				695DF5482979774D00E0BB67 /* ContentView.swift in Sources */,
 				695DF5462979774D00E0BB67 /* Sako0602_kadai14_swiftUIApp.swift in Sources */,
+				695DF57029797A9600E0BB67 /* FruitsAddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

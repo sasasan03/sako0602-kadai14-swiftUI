@@ -8,15 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isPresented = false
+    @State private var fruits = [
+    FruitsPropaty(name: "りんご", isChecked: false),
+    FruitsPropaty(name: "みかん", isChecked: true),
+    FruitsPropaty(name: "バナナ", isChecked: false),
+    FruitsPropaty(name: "パイナップル", isChecked: true),
+    ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(fruits, id: \.id){ fruit in
+                    HStack{
+                        Image(systemName: fruit.isChecked
+                              ? "checkmark"
+                              : ""
+                        )
+                        .foregroundColor(Color.red)
+                        .frame(width: 30, height: 30)
+                        Text(fruit.name)
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isPresented = true
+                    }, label: {
+                        Text("+")
+                            .font(.title)
+                    })
+                    .padding()
+                }
+            }
         }
-        .padding()
+        .sheet(isPresented: $isPresented) {
+            FruitsAddView(isPresented: $isPresented, fruits: $fruits)
+        }
     }
+}
+
+struct FruitsPropaty {
+    var id = UUID()
+    var name: String
+    var isChecked: Bool
 }
 
 struct ContentView_Previews: PreviewProvider {
