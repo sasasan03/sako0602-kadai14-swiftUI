@@ -10,8 +10,9 @@ import SwiftUI
 struct FruitsAddView: View {
     
     @State private var textNewItem = ""
-    @Binding var isPresented: Bool
-    @Binding var fruits: [FruitsPropaty]
+
+    let save: (String) -> Void
+    let cancel: () -> Void
     
     var body: some View {
         NavigationStack{
@@ -25,7 +26,7 @@ struct FruitsAddView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel"){
-                        isPresented = false
+                        cancel()
                     }
                 }
             }
@@ -33,8 +34,7 @@ struct FruitsAddView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("save"){
-                        fruits.append(FruitsPropaty(name: textNewItem, isChecked: false))
-                        isPresented = false
+                        save(textNewItem)
                     }
                 }
             }
@@ -46,6 +46,9 @@ struct FruitsAddView: View {
 struct FruitsAddView_Previews: PreviewProvider {
     
     static var previews: some View {
-        FruitsAddView(isPresented: Binding<Bool>.constant(false), fruits: Binding<[FruitsPropaty]>.constant([FruitsPropaty(name: "aa", isChecked: false)]))
+        FruitsAddView(
+            save: { _ in },
+            cancel: {}
+        )
     }
 }
