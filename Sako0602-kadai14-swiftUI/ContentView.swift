@@ -37,15 +37,25 @@ struct ContentView: View {
                     Button(action: {
                         isPresented = true
                     }, label: {
-                        Text("+")
-                            .font(.title)
+//                        Text("+")
+//                        .font(.title)
+                        Image(systemName: "plus")
                     })
                     .padding()
                 }
             }
         }
         .sheet(isPresented: $isPresented) {
-            FruitsAddView(isPresented: $isPresented, fruits: $fruits)
+            //            FruitsAddView(isPresented: $isPresented, fruits: $fruits)
+            FruitsAddView(
+                save: { name in
+                    fruits.append(FruitsPropaty(name: name, isChecked: false)
+                    )
+                    isPresented = false
+                } ,cancel: {
+                    isPresented = false
+                }
+            )
         }
     }
 }
